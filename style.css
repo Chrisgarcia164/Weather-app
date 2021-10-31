@@ -1,0 +1,10 @@
+* {
+    border: red solid 1px;
+}
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+header h1 {
+    font-size: 50px;
+}
