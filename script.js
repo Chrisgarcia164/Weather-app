@@ -37,7 +37,9 @@ submitBtn.on("click", function cityInfo() {
             console.log(data);
             console.log(data.daily);
             for (let i = 1; i < 6; i++) {
-                console.log(data.daily[i])
+                console.log(data.daily[i].temp.day + '°F')
+                console.log(data.daily[i].humidity + ' %')
+                console.log(data.daily[i].wind_speed + ' MPH')
             }
           });
       }
