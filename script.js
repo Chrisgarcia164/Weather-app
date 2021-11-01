@@ -28,15 +28,18 @@ submitBtn.on("click", function cityInfo() {
       console.log(lat);
       fiveDay();
       function fiveDay() {
-        var fiveDayUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=f58e0adad5d2bd441a1a32ca9f7c08a4`;
+        var fiveDayUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=f58e0adad5d2bd441a1a32ca9f7c08a4`;
         fetch(fiveDayUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
             console.log(data);
+            console.log(data.daily);
+            for (let i = 1; i < 6; i++) {
+                console.log(data.daily[i])
+            }
           });
       }
     });
 });
-
