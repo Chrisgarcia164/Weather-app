@@ -3,7 +3,7 @@ var city = $("#city-search");
 var temp = $("#temperature");
 var humidity = $("#humid");
 var wind = $("#current-wind");
-var fiveDayForecast = $("#5-day")
+var fiveDayForecast = $("#five-day");
 
 submitBtn.on("click", function cityInfo() {
   cityInput = city.val();
@@ -37,6 +37,7 @@ submitBtn.on("click", function cityInfo() {
           .then(function (data) {
             console.log(data);
             console.log(data.daily);
+            fiveDayForecast.empty();
             for (let i = 1; i < 6; i++) {
               var tempDay = data.daily[i].temp.day + "°F";
               var windDay = data.daily[i].wind_speed + " MPH";
@@ -44,9 +45,10 @@ submitBtn.on("click", function cityInfo() {
               console.log(tempDay);
               console.log(windDay);
               console.log(humidDay);
-              var dayInfo = document.createElement("h4");
-              dayInfo.innerText ='Temp: ' + tempDay + 'Wind: ' + windDay + 'Humid:' + humidDay
-              fiveDayForecast.append(dayInfo)
+              var dayInfo = document.createElement("p");
+              dayInfo.innerText =
+                "Temp: " + tempDay + " Wind: " + windDay + " Humid: " + humidDay;
+              fiveDayForecast.append(dayInfo);
             }
           });
       }

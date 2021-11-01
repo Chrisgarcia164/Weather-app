@@ -14,27 +14,29 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
-      <header>
-          <h1>Weather Dashboard</h1>
-      </header>
-      <div id="search-city">
-          <h2>Search for a city here:</h2>
-          <input type="text" name="city" id="city-search">
-          <button id="submit-btn">Search City</button>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+    <div id="search-city">
+      <h2>Search for a city here:</h2>
+      <input type="text" name="city" id="city-search" />
+      <button id="submit-btn">Search City</button>
+    </div>
+    <div id="current-weather">
+      <div id="current-weather-box">
+        <h2>Current weather</h2>
+        <ul>
+          <li id="temp">Temp: <span id="temperature"></span></li>
+          <li id="wind">Wind: <span id="current-wind"></span></li>
+          <li id="humidity">Humidity: <span id="humid"></span></li>
+        </ul>
       </div>
-      <div id="current-weather">
-          <div>
-              <ul>
-                  <li id="temp">Temp: <span id="temperature"></span></li>
-                  <li id="wind">wind: <span id="current-wind"></span></li>
-                  <li id="humidity">Humidity: <span id="humid"></span></li>
-              </ul>
-          </div>
-      </div>
-      <div id="5-day">
-          <h3>5-day forecast:</h3>
-          
-      </div>
+    </div>
+    <div id="five-days">
+      <h3>5-day forecast:</h3>
+    </div>
+    <div id="five-day">
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
