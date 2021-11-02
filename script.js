@@ -9,7 +9,7 @@ submitBtn.on("click", function cityInfo() {
   cityInput = city.val();
   console.log(cityInput);
 
-  var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=imperial&appid=efce59023ac17e5d9f64c63306a72223`;
+  var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=imperial&appid=931e793d41fdeb40a580f36bfb34a0af`;
 
   fetch(requestUrl)
     .then((response) => {
@@ -29,7 +29,7 @@ submitBtn.on("click", function cityInfo() {
       console.log(lat);
       fiveDay();
       function fiveDay() {
-        var fiveDayUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=f58e0adad5d2bd441a1a32ca9f7c08a4`;
+        var fiveDayUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=931e793d41fdeb40a580f36bfb34a0af`;
         fetch(fiveDayUrl)
           .then(function (response) {
             return response.json();
